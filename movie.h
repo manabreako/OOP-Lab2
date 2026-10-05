@@ -45,4 +45,8 @@ public:
     int getDuration() const;
 
     static int getObjectCount();
+
+    bool changeTitle(const std::string& newTitle);
+    bool changeRating(double newRating);
+    bool changeDuration(int newDuration);
 };
