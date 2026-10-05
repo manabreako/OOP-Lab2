@@ -49,4 +49,6 @@ public:
     bool changeTitle(const std::string& newTitle);
     bool changeRating(double newRating);
     bool changeDuration(int newDuration);
+
+    void printInfo() const;
 };
