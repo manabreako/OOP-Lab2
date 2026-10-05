@@ -33,7 +33,16 @@ public:
 
     Movie(const std::string& title, int year, double rating,
           Genre genre, int duration);
+
     Movie(const Movie& other);
 
     ~Movie();
+
+    std::string getTitle() const;
+    int getYear() const;
+    double getRating() const;
+    Genre getGenre() const;
+    int getDuration() const;
+
+    static int getObjectCount();
 };
