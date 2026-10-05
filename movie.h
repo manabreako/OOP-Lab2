@@ -27,4 +27,13 @@ private:
     static bool isValidYear(int year);
     static bool isValidRating(double rating);
     static bool isValidDuration(int duration);
+
+public:
+    Movie();
+
+    Movie(const std::string& title, int year, double rating,
+          Genre genre, int duration);
+    Movie(const Movie& other);
+
+    ~Movie();
 };
