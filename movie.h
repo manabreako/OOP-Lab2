@@ -20,4 +20,6 @@ private:
     double rating;
     Genre genre;
     int duration;
+
+    static int objectCount;
 };
