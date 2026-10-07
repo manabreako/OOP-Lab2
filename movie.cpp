@@ -72,7 +72,7 @@ bool Movie::isValidDuration(int duration)
 
 /**
  * @brief Конструктор по умолчанию.
- *
+ * Список инициализации используется для установки стандартных значений.
  * Создаёт объект Movie со стандартными значениями:
  * название "Unknown Movie", год 2026, рейтинг 0,
  * жанр Drama и продолжительность 90 минут.
@@ -157,6 +157,7 @@ Movie::Movie(const Movie& other)
 Movie::~Movie()
 {
     --objectCount;
+    std::cout << "Объект удалён." << " Осталось объектов: " << objectCount << '\n';
 }
 
 /**
