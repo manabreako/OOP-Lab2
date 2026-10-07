@@ -110,3 +110,36 @@ int Movie::getObjectCount()
 {
     return objectCount;
 }
+
+bool Movie::changeTitle(const std::string& newTitle)
+{
+    if (!isValidTitle(newTitle))
+    {
+        return false;
+    }
+
+    title = newTitle;
+    return true;
+}
+
+bool Movie::changeRating(double newRating)
+{
+    if (!isValidRating(newRating))
+    {
+        return false;
+    }
+
+    rating = newRating;
+    return true;
+}
+
+bool Movie::changeDuration(int newDuration)
+{
+    if (!isValidDuration(newDuration))
+    {
+        return false;
+    }
+
+    duration = newDuration;
+    return true;
+}
