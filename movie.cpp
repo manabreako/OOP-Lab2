@@ -65,3 +65,18 @@ Movie::Movie(const std::string& title, int year, double rating,
 
     ++objectCount;
 }
+
+Movie::Movie(const Movie& other)
+    : title(other.title),
+      year(other.year),
+      rating(other.rating),
+      genre(other.genre),
+      duration(other.duration)
+{
+    ++objectCount;
+}
+
+Movie::~Movie()
+{
+    --objectCount;
+}
