@@ -67,5 +67,25 @@ int main()
         std::cout << "Ошибка: продолжительность должна быть больше 0.\n";
     }
 
+    std::cout << "\n=== СОСТОЯНИЕ ПОСЛЕ НЕКОРРЕКТНЫХ ОПЕРАЦИЙ ===\n\n";
+
+    movie1.printInfo();
+
+    std::cout << "\n=== ПРОВЕРКА НЕЗАВИСИМОСТИ ОБЪЕКТОВ ===\n\n";
+
+    std::cout << "Фильм 2 до изменения:\n";
+    movie2.printInfo();
+
+    std::cout << "\nИзменяем только фильм 2...\n\n";
+
+    movie2.changeTitle("Интерстеллар: Новая версия");
+    movie2.changeRating(9.0);
+
+    std::cout << "Фильм 2 после изменения:\n";
+    movie2.printInfo();
+
+    std::cout << "\nФильм 3 после изменения фильма 2:\n";
+    movie3.printInfo();
+
     return 0;
 }
