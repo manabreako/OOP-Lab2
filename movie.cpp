@@ -143,3 +143,30 @@ bool Movie::changeDuration(int newDuration)
     duration = newDuration;
     return true;
 }
+
+static std::string genreToString(Genre genre)
+{
+    switch (genre)
+    {
+    case Genre::Action:
+        return "Боевик";
+
+    case Genre::Comedy:
+        return "Комедия";
+
+    case Genre::Drama:
+        return "Драма";
+
+    case Genre::Horror:
+        return "Ужасы";
+
+    case Genre::Fantasy:
+        return "Фэнтези";
+
+    case Genre::SciFi:
+        return "Фантастика";
+
+    default:
+        return "Неизвестно";
+    }
+}
