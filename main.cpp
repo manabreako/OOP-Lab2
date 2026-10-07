@@ -36,5 +36,36 @@ int main()
     std::cout << "\nФильм 3:\n";
     movie3.printInfo();
 
+    std::cout << "\n=== КОРРЕКТНЫЕ ОПЕРАЦИИ ===\n\n";
+
+    movie1.changeTitle("Начало");
+    movie1.changeRating(8.8);
+    movie1.changeDuration(148);
+
+    std::cout << "После изменения фильма 1:\n";
+    movie1.printInfo();
+
+    std::cout << "\n=== НЕКОРРЕКТНЫЕ ОПЕРАЦИИ ===\n\n";
+
+    if (!movie1.changeTitle(""))
+    {
+        std::cout << "Ошибка: нельзя установить пустое название.\n";
+    }
+
+    if (!movie1.changeRating(15.0))
+    {
+        std::cout << "Ошибка: рейтинг не может быть больше 10.\n";
+    }
+
+    if (!movie1.changeRating(-2.0))
+    {
+        std::cout << "Ошибка: рейтинг не может быть отрицательным.\n";
+    }
+
+    if (!movie1.changeDuration(0))
+    {
+        std::cout << "Ошибка: продолжительность должна быть больше 0.\n";
+    }
+
     return 0;
 }
