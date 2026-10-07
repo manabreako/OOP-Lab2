@@ -170,3 +170,12 @@ static std::string genreToString(Genre genre)
         return "Неизвестно";
     }
 }
+
+void Movie::printInfo() const
+{
+    std::cout << "Название: " << title << '\n';
+    std::cout << "Год выпуска: " << year << '\n';
+    std::cout << "Рейтинг: " << rating << '\n';
+    std::cout << "Жанр: " << genreToString(genre) << '\n';
+    std::cout << "Продолжительность: " << duration << " мин.\n";
+}
