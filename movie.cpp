@@ -80,3 +80,33 @@ Movie::~Movie()
 {
     --objectCount;
 }
+
+std::string Movie::getTitle() const
+{
+    return title;
+}
+
+int Movie::getYear() const
+{
+    return year;
+}
+
+double Movie::getRating() const
+{
+    return rating;
+}
+
+Genre Movie::getGenre() const
+{
+    return genre;
+}
+
+int Movie::getDuration() const
+{
+    return duration;
+}
+
+int Movie::getObjectCount()
+{
+    return objectCount;
+}
