@@ -1,0 +1,48 @@
+@startuml
+
+class Movie
+{
+    - title : string
+    - year : int
+    - rating : double
+    - genre : Genre
+    - duration : int
+    - {static} objectCount : int
+
+    - {static} isValidTitle(title : string) : bool
+    - {static} isValidYear(year : int) : bool
+    - {static} isValidRating(rating : double) : bool
+    - {static} isValidDuration(duration : int) : bool
+
+    + Movie()
+    + Movie(title : string, year : int, rating : double, genre : Genre, duration : int)
+    + Movie(other : Movie)
+    + ~Movie()
+
+    + getTitle() : string
+    + getYear() : int
+    + getRating() : double
+    + getGenre() : Genre
+    + getDuration() : int
+    + {static} getObjectCount() : int
+
+    + changeTitle(newTitle : string) : bool
+    + changeRating(newRating : double) : bool
+    + changeDuration(newDuration : int) : bool
+
+    + printInfo() : void
+}
+
+enum Genre
+{
+    Action
+    Comedy
+    Drama
+    Horror
+    Fantasy
+    SciFi
+}
+
+Movie --> Genre
+
+@enduml
