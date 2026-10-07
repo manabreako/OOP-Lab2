@@ -24,3 +24,13 @@ bool Movie::isValidDuration(int duration)
 {
     return duration > 0;
 }
+
+Movie::Movie()
+    : title("Unknown Movie"),
+      year(2026),
+      rating(0.0),
+      genre(Genre::Drama),
+      duration(90)
+{
+    ++objectCount;
+}
